@@ -105,12 +105,12 @@ input, select, textarea {
 		-ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
 		border-bottom: dotted 1px;
-		color: #e44c65;
+		color: #e78e5a;
 		text-decoration: none;
 	}
 
 		a:hover {
-			color: #e44c65 !important;
+			color: #e78e5a !important;
 			border-bottom-color: transparent;
 		}
 
@@ -2180,7 +2180,7 @@ input, select, textarea {
 	}
 
 		header.major:after {
-			background: #e44c65;
+			background: #1c1d26;
 			content: '';
 			display: inline-block;
 			height: 0.2em;
@@ -3133,7 +3133,7 @@ input, select, textarea {
 		}
 
 		.spotlight.style1 .content {
-			border-color: #e44c65;
+			border-color: #e78e5a;
 		}
 
 		.spotlight.style2 .content {
@@ -3195,7 +3195,7 @@ input, select, textarea {
 	}
 
 		.wrapper.style2 {
-			background: #e44c65;
+			background: #e78e5a;
 		}
 
 			.wrapper.style2 input[type="text"]:focus,
