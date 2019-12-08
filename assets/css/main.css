@@ -2217,7 +2217,7 @@ input, select, textarea {
 		display: block;
 		font-size: 0.9em;
 		font-weight: 300;
-		margin: 0 0 1em 0;
+		margin: 1em 0 0 0;
 	}
 
 	input[type="text"],
@@ -4118,4 +4118,8 @@ section.col-6.col-6-medium.col-12-xsmall {
     border: 1px solid #333;
     max-width: 450px;
     margin: 10px 10px 0 10px;
+}
+
+.form-group {
+	text-align: left;
 }
