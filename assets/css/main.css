@@ -66,6 +66,11 @@ input, select, textarea {
 	appearance: none;
 }
 
+input[type=submit] {
+	background-color: #DD5123 !important; 
+	font-weight: bold !important;
+}
+
 /* Basic */
 
 	html {
