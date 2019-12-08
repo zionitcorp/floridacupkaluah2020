@@ -146,8 +146,10 @@ input, select, textarea {
 	}
 
 	h3 {
+		color: #e88e5d;
 		font-size: 1.35em;
 		line-height: 1.5em;
+		font-weight: bold;
 	}
 
 	h4 {
@@ -3143,7 +3145,7 @@ input, select, textarea {
 		}
 
 		.spotlight.style2 .content {
-			border-color: #5480f1;
+			border-color: #3b7759;
 		}
 
 		.spotlight.style3 .content {
