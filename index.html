@@ -168,22 +168,21 @@
                 </header>
                 <fieldset
                     style="margin-left:auto;margin-right: auto; border: 1px #fff solid; padding: 30px; background-color: rgba(0,0,0,0.4);">
-                    <form id="contact-form" method="post" action="http://floridacupkaluah.com/contact.php" role="form"
-                        novalidate="true">
+                    <form id="contact-form" method="post" action="http://floridacupkaluah.com/contact.php" role="form" data-toggle="validator">
                         <div class="controls">
                             <div class="row">
                                 <div class="form-group col-6 col-12-small">
                                     <label for="form_name">First Name *</label>
                                     <input id="form_name" type="text" name="firstname" class="form-control"
                                         placeholder="First Name *" required="required"
-                                        data-error="Firstname is required.">
+                                        data-error="First Name is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                                 <div class="form-group col-6 col-12-small">
                                     <label for="form_lastname">Lastname *</label>
                                     <input id="form_lastname" type="text" name="lastname" class="form-control"
                                         placeholder="Last Name *" required="required"
-                                        data-error="Lastname is required.">
+                                        data-error="Last Name is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>
@@ -327,8 +326,7 @@
                             <div class="=row">
                                 <br>
                                 <div class="col-12">
-                                    <input id="sendbtn" type="submit" value="SEND YOUR REQUEST"
-                                        onclick="javascript:document.getElementById('sendbtn').style.display='none';">
+                                    <input id="sendbtn" type="submit" value="SEND YOUR REQUEST">
                                 </div>
                                 <div class="messages"></div>
                             </div>
@@ -368,6 +366,8 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
 </body>
 
 </html>
