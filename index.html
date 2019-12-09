@@ -34,7 +34,8 @@
                     <br>
                     <div style="text-align: center;">
                         <input type="button" name="Registration" value="5K RUN Subscription Here"
-                            style="background-color: #DD5123; font-weight: bold;" onclick="window.location.href='https://endurancecui.active.com/event-reg/select-race?e=65803853&i=d944bcd1-2dda-4380-bf39-0ff21c010576'">
+                            style="background-color: #DD5123; font-weight: bold;"
+                            onclick="window.location.href='https://endurancecui.active.com/event-reg/select-race?e=65803853&i=d944bcd1-2dda-4380-bf39-0ff21c010576'">
                     </div>
                 </header>
                 <span class="image"><img src="images/pic01.jpg" alt="" /></span>
@@ -168,7 +169,8 @@
                 </header>
                 <fieldset
                     style="margin-left:auto;margin-right: auto; border: 1px #fff solid; padding: 30px; background-color: rgba(0,0,0,0.4);">
-                    <form id="contact-form" method="post" action="http://floridacupkaluah.com/contact.php" role="form" data-toggle="validator">
+                    <form id="contact-form" method="post" action="" role="form"
+                        data-toggle="validator">
                         <div class="controls">
                             <div class="row">
                                 <div class="form-group col-6 col-12-small">
@@ -326,9 +328,9 @@
                             <div class="=row">
                                 <br>
                                 <div class="col-12">
-                                    <input id="sendbtn" type="submit" value="SEND YOUR REQUEST">
+                                    <input id="sendbtn" type="button" value="SEND YOUR REQUEST" onclick="sendEmail();">
                                 </div>
-                                <div class="messages"></div>
+                                <div class="messages" id="mail-status"></div>
                             </div>
                         </div>
                     </form>
@@ -368,6 +370,37 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/popper.min.js"></script>
+
+    <script>
+        function sendEmail() {
+            jQuery.ajax({
+                url: "contact.php",
+                data: 'firstname='  + $("#form_name").val()
+                    + '&lastname='  + $("#form_lastname").val()
+                    + '&email='     + $("#form_email").val()
+                    + '&telephone=' + $("#form_telephone").val()
+                    + '&need='      + $("#form_need").val()
+                    + '&runners='   + $("#form_runners").val()
+                    + '&countryofresidence=' + $("#form_country").val()
+                    + '&team='      + $("#form_team").val()
+                    + '&package='   + $("#form_package").val()
+                    + '&checkin='   + $("#form_checkin").val()
+                    + '&checkout='  + $("#form_checkout").val()
+                    + '&rooms='     + $("#form_rooms").val()
+                    + '&adults='    + $("#form_adults").val()
+                    + '&children='  + $("#form_children").val()
+                    + '&infants='   + $("#form_infants").val()
+                    + '&message='   + $("#form_message").val(),
+                type: "POST",
+                success: function (data) {
+                    $("#mail-status").html(data);
+                    $("sendbtn").css("display", "none");
+                    alert(data);
+                },
+                error: function (data) { alert(data); }
+            });
+        }    
+    </script>
 </body>
 
 </html>
